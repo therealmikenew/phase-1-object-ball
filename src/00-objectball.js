@@ -120,16 +120,32 @@ const gameObject = function(){
  function numPointsScored(name) {
      const game = gameObject();
      for(let gameKey in game){
-         const playersKey = game[gameKey].players[name].points;
-         console.log(playersKey);
-         
-         
+         const points = game[gameKey].players[name].points;
+         return points     
      }
  }
 
- console.log(numPointsScored("Brendan Haywood"));
+ console.log(numPointsScored("Brook Lopez"));
 
 
  function shoeSize(name) {
-     return gameObject().home
+    const game = gameObject();
+    for(let gameKey in game){
+        const shoeSize = game[gameKey].players[name].shoe;
+        return shoeSize     
+    }
  }
+
+ console.log(shoeSize("Reggie Evans"));
+
+ //got stuck here
+
+ function teamColors(name) {
+    const game = gameObject();
+    for(let gameKey in game){
+        const teamColors = game[gameKey].colors;
+        return teamColors  
+    }
+ }
+
+ console.log(teamColors())
