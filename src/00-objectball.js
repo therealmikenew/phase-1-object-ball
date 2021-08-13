@@ -118,8 +118,18 @@ const gameObject = function(){
 //  console.log(gameObject());
 
  function numPointsScored(name) {
-     const playerPoints = gameObject().home.players[name].points
-     console.log(playerPoints)
+     const game = gameObject();
+     for(let gameKey in game){
+         const playersKey = game[gameKey].players[name].points;
+         console.log(playersKey);
+         
+         
+     }
  }
 
- console.log(numPointsScored("Reggie Evans"));
+ console.log(numPointsScored("Brendan Haywood"));
+
+
+ function shoeSize(name) {
+     return gameObject().home
+ }
